@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="img/codoacodo.png" sizes="16x16">
+    <title>Codo a Codo - CONF Bs As</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-xxl">
+            <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                <img src="img/codoacodo.png" alt="Logo de Codo a Codo" height="60" class="d-inline-block align-text-top">
+                <h1 class="h5 d-none d-sm-inline-block">Conf Bs As</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">La Conferencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#oradores">Los oradores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#lugar">El lugar y la fecha</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#orador">Conviértete en orador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #29a744" href="./ticket.html">Comprar tickets</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container-lg">
+        <section>
+            <form class="col-lg-8 col-12 mx-auto d-flex flex-md-row flex-column gap-2 mt-5 mb-1">
+                <label class="btn btn-outline-primary flex-fill py-4" for="estudiante" style="color: black;">
+                    <input type="radio" class="btn-check" name="options" id="estudiante" autocomplete="off" value="estudiante">
+                    <h3>Estudiantes</h3>
+                    <p>Tiene un descuento</p>
+                    <p><b>80%</b></p>
+                    <p class="mb-0 text-muted">*Presentar documentación</p>
+                </label>
+                <label class="btn btn-outline-success flex-fill py-4" for="trainee" style="color: black;">
+                    <input type="radio" class="btn-check" name="options" id="trainee" autocomplete="off" value="trainee">
+                    <h3>Trainee</h3>
+                    <p>Tiene un descuento</p>
+                    <p><b>50%</b></p>
+                    <p class="mb-0 text-muted">*Presentar documentación</p>
+                </label>
+                <label class="btn btn-outline-warning flex-fill py-4" for="junior" style="color: black;">
+                    <input type="radio" class="btn-check" name="options" id="junior" autocomplete="off" value="junior">
+                    <h3>Junior</h3>
+                    <p>Tiene un descuento</p>
+                    <p><b>15%</b></p>
+                    <p class="mb-0 text-muted">*Presentar documentación</p>
+                </label>
+            </form>
+        </section>
+        <section class="text-center col-lg-8 mx-auto">
+            <p class="mb-0">venta</p>
+            <h2 class="mt-0">VALOR DE TICKET $200</h2>
+            <form id="formulario" class="d-flex flex-column text-start">
+                <div class="row g-2 my-3">
+                    <div class="col-12 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" required>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" required>
+                    </div>
+                </div>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                <div class="row g-2">
+                    <div class="col">
+                        <label class="my-2" for="cantidad">Cantidad</label>
+                        <input type="number" class="form-control" id="cantidad" placeholder="Cantidad" required>
+                    </div>
+                    <div class="col">
+                        <label class="my-2" for="categoria">Categoria</label>
+                        <select id="categoria" class="form-select" aria-label="Default select example">
+                            <option value="0.20" selected>Estudiante</option>
+                            <option value="0.50">Trainee</option>
+                            <option value="0.85">Junior</option>
+                            <option value="1">Normal</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="alert alert-primary my-5" role="alert">
+                    Total a Pagar <b id="precioFinal">$</b>
+                </div>
+                <div class="row g-2 mb-4">
+                    <div class="col">
+                        <button type="reset" class="btn text-light fs-5 w-100" style="background: #96c93e">Borrar</button>
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn text-light fs-5 w-100" style="background: #96c93e">Resumen</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="py-3" style="background: #1e516e;">
+        <ul class="nav justify-content-between container row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-auto">
+            <li class="nav-item col col-xl-auto">
+                <a class="nav-link text-light fs-5" aria-current="page" href="#">Preguntas<br />frecuentes</a>
+            </li>
+            <li class="nav-item col col-xl-auto">
+                <a class="nav-link text-light fs-5" href="#">Contáctanos</a>
+            </li>
+            <li class="nav-item col col-xl-auto">
+                <a class="nav-link text-light fs-5" href="#">Prensa</a>
+            </li>
+            <li class="nav-item col col-xl-auto">
+                <a class="nav-link text-light fs-5" href="#">Conferencias</a>
+            </li>
+            <li class="nav-item col col-xl-auto">
+                <a class="nav-link text-light fs-5" href="#">Términos y<br />condiciones</a>
+            </li>
+            <li class="nav-item col col-xl-auto">
+                <a class="nav-link text-light fs-5" href="#">Privacidad</a>
+            </li>
+            <li class="nav-item col col-xl-auto">
+                <a class="nav-link text-light fs-5" href="#">Estudiantes</a>
+            </li>
+        </ul>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+        let precio = 200
+        estudiante.addEventListener("change", (e) => {
+            categoria.value = "0.20"
+        })
+        trainee.addEventListener("change", (e) => {
+            categoria.value = "0.50"
+        })
+        junior.addEventListener("change", (e) => {
+            categoria.value = "0.85"
+        })
+        formulario.addEventListener("submit", (e) => {
+            e.preventDefault()
+            precioFinal.innerText = "$" + parseInt(cantidad.value) * precio * parseFloat(categoria.value)
+            console.log("hola")
+
+        })
+
+    </script>
+</body>
+
+</html>
